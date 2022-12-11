@@ -59,6 +59,7 @@
     <Compile Include="Entitys\Film.cs" />
     <Compile Include="Entitys\Genre.cs" />
     <Compile Include="Entitys\Review.cs" />
+    <Compile Include="Interfaces\IGenericRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
