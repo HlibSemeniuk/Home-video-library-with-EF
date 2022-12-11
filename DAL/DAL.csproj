@@ -47,6 +47,7 @@
     <Compile Include="Entitys\Director.cs" />
     <Compile Include="Entitys\Film.cs" />
     <Compile Include="Entitys\Genre.cs" />
+    <Compile Include="Entitys\Review.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

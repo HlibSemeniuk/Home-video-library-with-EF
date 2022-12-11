@@ -19,5 +19,6 @@ namespace DAL.Entitys
         public ICollection<Director> Directors { get; set; }
 
         public ICollection<Genre> Genres { get; set; }
+        public ICollection<Review> Reviews { get; set; }
     }
 }
