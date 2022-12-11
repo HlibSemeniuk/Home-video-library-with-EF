@@ -45,6 +45,7 @@
     <Compile Include="EF\HomeVideoLibraryContext.cs" />
     <Compile Include="Entitys\Actor.cs" />
     <Compile Include="Entitys\Director.cs" />
+    <Compile Include="Entitys\Genre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
