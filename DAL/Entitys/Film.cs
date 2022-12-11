@@ -13,5 +13,11 @@ namespace DAL.Entitys
         public DateTime ReleaseDate { get; set; }
         public string Country { get; set; }
         public decimal Budget { get; set; }
+
+        public ICollection<Actor> Actors { get; set; }
+
+        public ICollection<Director> Directors { get; set; }
+
+        public ICollection<Genre> Genres { get; set; }
     }
 }
