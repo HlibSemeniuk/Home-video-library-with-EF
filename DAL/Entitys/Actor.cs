@@ -15,7 +15,7 @@ namespace DAL.Entitys
         public string Country { get; set; }
         public string Description { get; set; }
 
-        public ICollection<Film> Films { get; set; }
+        public virtual ICollection<Film> Films { get; set; }
 
     }
 }

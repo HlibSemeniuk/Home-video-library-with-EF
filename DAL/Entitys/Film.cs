@@ -14,11 +14,11 @@ namespace DAL.Entitys
         public string Country { get; set; }
         public decimal Budget { get; set; }
 
-        public ICollection<Actor> Actors { get; set; }
+        public virtual ICollection<Actor> Actors { get; set; }
 
-        public ICollection<Director> Directors { get; set; }
+        public virtual ICollection<Director> Directors { get; set; }
 
-        public ICollection<Genre> Genres { get; set; }
-        public ICollection<Review> Reviews { get; set; }
+        public virtual ICollection<Genre> Genres { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }

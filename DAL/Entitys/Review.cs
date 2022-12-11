@@ -12,6 +12,6 @@ namespace DAL.Entitys
         public string ReviewerName { get; set; }
         public string Description { get; set; }
         public float Rating { get; set; }
-        public Film Film { get; set; }
+        public virtual Film Film { get; set; }
     }
 }
