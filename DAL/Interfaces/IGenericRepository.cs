@@ -16,5 +16,7 @@ namespace DAL.Interfaces
         void Insert(T entity);
         void Update(T entity);
         void Delete(T entity);
+        IEnumerable<T> Find(Func<T, bool> predicate);
+        void Save();
     }
 }
