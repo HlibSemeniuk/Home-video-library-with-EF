@@ -39,8 +39,9 @@ namespace DAL.Repositories
             _context.Entry(entity).State = EntityState.Modified;
         }
 
-        public void Delete(T entity)
+        public void Delete(int id)
         {
+            T entity = _context.Set<T>().Find(id);
             _context.Set<T>().Remove(entity);
         }
 
