@@ -19,9 +19,11 @@ namespace PL
 {
     public partial class Form1 : Form
     {
+        int selectedRow;
         public Form1()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace PL
             dataGridView1.Columns.Add("Birthdate", "Дата народження");
             dataGridView1.Columns.Add("Country", "Країна");
             dataGridView1.Columns.Add("Description", "Опис");
-            //dataGridView1.Columns.Add("Filmography", "Фільмографія");
+            dataGridView1.Columns.Add("Filmography", "Фільмографія");
         }
 
         private void RefreshDataGrid(DataGridView dgv)
@@ -58,7 +60,26 @@ namespace PL
             dgv.Rows.Clear();
             foreach (ActorDTO actor in actors)
             {
-                dgv.Rows.Add(actor.Id, actor.Name, actor.Birthdate.ToString("dd.MM.yyyy"), actor.Country, actor.Description);
+                string films = "";
+                int i = 0;
+                foreach (FilmDTO film in actor.Films)
+                {
+                    if (i == 0)
+                    {
+                        films += '«' + film.Name + '»';
+                    }
+                    else
+                    {
+                        films += ", «" + film.Name + '»';
+                    }
+                }
+                
+                if (films == "")
+                {
+                    films = "Немає інформації";
+                }
+
+                dgv.Rows.Add(actor.Id, actor.Name, actor.Birthdate.ToString("dd.MM.yyyy"), actor.Country, actor.Description, films);
             }
         }
         private void textBox_Search_TextChanged(object sender, EventArgs e)
@@ -83,6 +104,23 @@ namespace PL
 
             }
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        { 
+            selectedRow= e.RowIndex;
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+
+                textBox_ID.Text = row.Cells[0].Value.ToString();
+                textBox_Name.Text = row.Cells[1].Value.ToString();
+                textBox_Age.Text = row.Cells[2].Value.ToString();
+                textBox_Country.Text = row.Cells[3].Value.ToString();
+                textBox_Description.Text = row.Cells[4].Value.ToString();
+                textBox_Filmography.Text = row.Cells[5].Value.ToString();
+            }
         }
     }
 }

@@ -31,7 +31,8 @@ namespace DAL.EF
         protected override void Seed(HomeVideoLibraryContext context)
         {
             context.Actors.Add(new Actor() { Name = "Морвед Кларк", Birthdate = new DateTime(1990, 03, 17), Country = "Велика Британія", Description = "За свою роботу в Saint Maud вона була номінована на найкращу жіночу роль Британської незалежної кінопремії та премії BAFTA Rising Star." });
-            context.Films.Add(new Film() { Name = "Володар перснів: Персні влади", ReleaseDate = new DateTime(2022, 09, 01), Country = "США", Budget = 465000000 });
+            context.Films.Add(new Film() { Name = "Володар перснів: Персні влади", ReleaseDate = new DateTime(2022, 09, 01), Country = "США", Budget = 465000000});
+
             context.SaveChanges();
         }
     }
