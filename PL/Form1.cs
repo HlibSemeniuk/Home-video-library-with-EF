@@ -57,9 +57,9 @@ namespace PL
 
         private void FillRows(DataGridView dgv, List<ActorDTO> actors)
         {
-            dgv.Rows.Clear();
-            foreach (ActorDTO actor in actors)
-            {
+                dgv.Rows.Clear();
+                foreach (ActorDTO actor in actors)
+                {
                 string films = "";
                 int i = 0;
                 foreach (FilmDTO film in actor.Films)
@@ -67,27 +67,28 @@ namespace PL
                     if (i == 0)
                     {
                         films += '«' + film.Name + '»';
-                    }
+                }
                     else
                     {
                         films += ", «" + film.Name + '»';
                     }
                 }
-                
+
                 if (films == "")
                 {
                     films = "Немає інформації";
-                }
+            }
 
                 dgv.Rows.Add(actor.Id, actor.Name, actor.Birthdate.ToString("dd.MM.yyyy"), actor.Country, actor.Description, films);
             }
         }
+
         private void textBox_Search_TextChanged(object sender, EventArgs e)
         {
             SearchBy(dataGridView1);
         }
 
-        
+
 
         private void SearchBy(DataGridView dgv)
         {
@@ -99,11 +100,15 @@ namespace PL
                 UnitOfWork uow = new UnitOfWork(context);
                 ActorService actorService = new ActorService(uow);
                 List<ActorDTO> actors = actorService.Find(a => a.Name.Contains(textBox_Search.Text) || a.Id.ToString().Contains(textBox_Search.Text) || a.Description.Contains(textBox_Search.Text) || a.Country.Contains(textBox_Search.Text) || a.Birthdate.ToString("dd.MM.yyyy").Contains(textBox_Search.Text));
- 
+
                 FillRows(dgv, actors);
 
-            }
+                foreach (ActorDTO actor in actors)
+                {
+                    dgv.Rows.Add(actor.Id, actor.Name, actor.Birthdate, actor.Country, actor.Description);
+                }
 
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
