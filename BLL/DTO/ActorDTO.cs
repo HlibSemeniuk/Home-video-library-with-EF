@@ -14,6 +14,6 @@ namespace BLL.DTO
         public string Country { get; set; }
         public string Description { get; set; }
 
-        public virtual ICollection<FilmDTO> Films { get; set; }
+        public virtual ICollection<FilmDTO> Films { get; set; } = new List<FilmDTO>();
     }
 }

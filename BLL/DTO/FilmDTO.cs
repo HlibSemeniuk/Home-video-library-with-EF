@@ -14,11 +14,11 @@ namespace BLL.DTO
         public string Country { get; set; }
         public decimal Budget { get; set; }
 
-        public virtual ICollection<ActorDTO> Actors { get; set; }
+        public virtual ICollection<ActorDTO> Actors { get; set; } = new List<ActorDTO>();
 
-        public virtual ICollection<DirectorDTO> Directors { get; set; }
+        public virtual ICollection<DirectorDTO> Directors { get; set; } = new List<DirectorDTO>();
 
-        public virtual ICollection<GenreDTO> Genres { get; set; }
-        public virtual ICollection<ReviewDTO> Reviews { get; set; }
+        public virtual ICollection<GenreDTO> Genres { get; set; } = new List<GenreDTO>();
+        public virtual ICollection<ReviewDTO> Reviews { get; set; } = new List<ReviewDTO>();
     }
 }
