@@ -23,6 +23,8 @@ namespace BLL.Services
         public void Add(ActorDTO dto)
         {
             Mapper.CreateMap<ActorDTO, Actor>();
+            Mapper.CreateMap<FilmDTO, Film>();
+
             Actor actor = Mapper.Map<ActorDTO, Actor>(dto);
 
             Database.Actors.Insert(actor);
@@ -38,8 +40,6 @@ namespace BLL.Services
 
         public void Delete(ActorDTO dto)
         {
-            /*Mapper.CreateMap<ActorDTO, Actor>();
-            Actor actor = Mapper.Map<ActorDTO, Actor>(dto);*/
             Database.Actors.Delete(dto.Id);
             Database.Save();
         }
