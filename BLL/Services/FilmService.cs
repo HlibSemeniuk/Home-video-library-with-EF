@@ -64,7 +64,7 @@ namespace BLL.Services
             Mapper.CreateMap<Review, ReviewDTO>();
 
             
-            Database.Films.Update(Mapper.Map<FilmDTO, Film>(dto);
+            Database.Films.Update(Mapper.Map<FilmDTO, Film>(dto));
             Database.Save();
         }
     }
