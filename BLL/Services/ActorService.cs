@@ -70,7 +70,13 @@ namespace BLL.Services
         public void ChangeData(ActorDTO dto)
         {
             Mapper.CreateMap<ActorDTO, Actor>();
+            Mapper.CreateMap<FilmDTO, Film>();
+            Mapper.CreateMap<ReviewDTO, Review>();
+            Mapper.CreateMap<DirectorDTO, Director>();
+            Mapper.CreateMap<GenreDTO, Genre>();
+
             Actor actor = Mapper.Map<ActorDTO, Actor>(dto);
+
             Database.Actors.Update(actor);
             Database.Save();
         }

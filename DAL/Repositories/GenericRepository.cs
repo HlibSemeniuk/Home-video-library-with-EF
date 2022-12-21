@@ -3,6 +3,7 @@ using DAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -34,9 +35,9 @@ namespace DAL.Repositories
             _context.Set<T>().Add(entity);
         }
 
-        public void Update(T entity)
+        public virtual void Update(T entity)
         {
-            _context.Entry(entity).State = EntityState.Modified;
+            _context.Set<T>().AddOrUpdate(entity);
         }
 
         public void Delete(int id)
