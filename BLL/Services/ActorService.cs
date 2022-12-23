@@ -54,9 +54,9 @@ namespace BLL.Services
             return Mapper.Map<IEnumerable<Actor>, List<ActorDTO>>(Database.Actors.GetAll());
         }
 
-        public void Delete(ActorDTO dto)
+        public void Delete(int id)
         {
-            Database.Actors.Delete(dto.Id);
+            Database.Actors.Delete(id);
             Database.Save();
         }
 
