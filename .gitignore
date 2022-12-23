@@ -371,3 +371,5 @@ FodyWeavers.xsd
 /PL/UpdateActor.resx
 /PL/UpdateActor.Designer.cs
 /PL/UpdateActor.cs
+/PL/Program.cs
+/BLL/ServiceModule.cs
