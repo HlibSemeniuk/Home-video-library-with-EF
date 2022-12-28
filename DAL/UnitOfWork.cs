@@ -20,6 +20,11 @@ namespace DAL
         private GenreRepository genreRepository;
         private ReviewRepository reviewRepository;
 
+        public UnitOfWork(string connectionString)
+        {
+            _context = new HomeVideoLibraryContext(connectionString);
+        }
+
         public IGenericRepository<Actor> Actors
         {
             get
@@ -68,11 +73,6 @@ namespace DAL
                     reviewRepository = new ReviewRepository(_context);
                 return reviewRepository;
             }
-        }
-
-        public UnitOfWork(HomeVideoLibraryContext context)
-        {
-            _context = context;
         }
 
         public void Save()

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BLL.DTO;
+using DAL;
 using DAL.Entitys;
 using DAL.Interfaces;
 using System;
@@ -14,9 +15,9 @@ namespace BLL.Services
     {
         public IUnitOfWork Database { get; set; }
 
-        public FilmService(IUnitOfWork uow)
+        public FilmService(string connectionString)
         {
-            Database = uow;
+            Database = new UnitOfWork(connectionString);
         }
 
         public void Add(FilmDTO dto)

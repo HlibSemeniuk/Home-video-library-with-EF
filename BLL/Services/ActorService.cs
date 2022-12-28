@@ -18,9 +18,9 @@ namespace BLL.Services
     {
         public IUnitOfWork Database { get; set; }
 
-        public ActorService(IUnitOfWork uow)
+        public ActorService(string connectionString)
         {
-            Database = uow;
+            Database = new UnitOfWork(connectionString);
         }
 
         public void Add(ActorDTO dto)

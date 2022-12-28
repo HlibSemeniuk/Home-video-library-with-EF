@@ -1,5 +1,6 @@
 using DAL.Entitys;
 using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
@@ -14,8 +15,8 @@ namespace DAL.EF
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Review> Reviews { get; set; }
 
-        public HomeVideoLibraryContext()
-            : base("name=HomeVideoLibraryContext")
+        public HomeVideoLibraryContext(string connectionString)
+            : base(connectionString)
         {
             Database.SetInitializer<HomeVideoLibraryContext>(new HomeVideoLibraryDbInitializer());
         }
