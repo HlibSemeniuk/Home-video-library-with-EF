@@ -51,6 +51,9 @@ namespace BLL.Services
         {
             Mapper.CreateMap<Actor, ActorDTO>();
             Mapper.CreateMap<Film, FilmDTO>();
+            Mapper.CreateMap<Review, ReviewDTO>();
+            Mapper.CreateMap<Director, DirectorDTO>();
+            Mapper.CreateMap<Genre, GenreDTO>();
             return Mapper.Map<IEnumerable<Actor>, List<ActorDTO>>(Database.Actors.GetAll());
         }
 
