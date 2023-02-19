@@ -373,3 +373,17 @@ FodyWeavers.xsd
 /PL/UpdateActor.cs
 /PL/Program.cs
 /BLL/ServiceModule.cs
+/PL/ActorMenu.resx
+/PL/ActorMenu.Designer.cs
+/PL/ActorMenu.cs
+/PL/StartMenu.resx
+/PL/StartMenu.Designer.cs
+/PL/StartMenu.cs
+/PL/AddFilm.resx
+/PL/AddFilm.Designer.cs
+/PL/AddFilm.cs
+/PL/FilmMenu.resx
+/PL/FilmMenu.Designer.cs
+/PL/FilmMenu.cs
+/PL/App.config
+/PL/packages.config
