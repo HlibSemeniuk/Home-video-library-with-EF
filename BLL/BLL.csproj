@@ -61,6 +61,7 @@
     <Compile Include="DTO\DirectorDTO.cs" />
     <Compile Include="DTO\FilmDTO.cs" />
     <Compile Include="DTO\GenreDTO.cs" />
+    <Compile Include="DTO\INameable.cs" />
     <Compile Include="DTO\ReviewDTO.cs" />
     <Compile Include="Interfaces\IGenericService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

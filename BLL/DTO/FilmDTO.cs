@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL.DTO
 {
-    public class FilmDTO
+    public class FilmDTO : INameable
     {
         public int ID { get; set; }
         public string Name { get; set; }
