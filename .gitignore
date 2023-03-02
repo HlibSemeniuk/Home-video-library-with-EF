@@ -403,3 +403,13 @@ FodyWeavers.xsd
 /PL/FilmMenus/FilmMenu.Designer.cs
 /PL/FilmMenus/FilmMenu.cs
 /PL/EntityMenu.cs
+/PL/FilmCrewInfoFiller.cs
+/PL/DirectorMenus/AddDirector.resx
+/PL/DirectorMenus/AddDirector.Designer.cs
+/PL/DirectorMenus/AddDirector.cs
+/PL/DirectorMenus/UpdateDirector.resx
+/PL/DirectorMenus/UpdateDirector.Designer.cs
+/PL/DirectorMenus/UpdateDirector.cs
+/PL/DirectorMenus/DirectorMenu.resx
+/PL/DirectorMenus/DirectorMenu.Designer.cs
+/PL/DirectorMenus/DirectorMenu.cs
