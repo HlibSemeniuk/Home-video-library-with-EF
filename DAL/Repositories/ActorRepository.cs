@@ -26,13 +26,14 @@ namespace DAL.Repositories
             EF.Birthdate = actor.Birthdate;
             EF.Country = actor.Country;
 
-
             for (int i = 0; i < EF.Films.Count; i++)
             {
                 if (!actor.Films.ToList().Exists(x => x.Name == EF.Films.ToList()[i].Name))
                 {
                     string Name = EF.Films.ToList()[i].Name;
                     EF.Films.Remove(_context.Films.Where(x => x.Name == Name).First());
+
+                    i--; // as Count of films change dynamically
                 }
             }
 
