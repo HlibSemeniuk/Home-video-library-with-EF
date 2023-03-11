@@ -39,6 +39,17 @@ namespace BLL.Services
             return Mapper.Map<IEnumerable<Film>, List<FilmDTO>>(Database.Films.GetAll());
         }
 
+        public FilmDTO GetByID(int id)
+        {
+            Mapper.CreateMap<Film, FilmDTO>();
+            Mapper.CreateMap<Actor, ActorDTO>();
+            Mapper.CreateMap<Genre, GenreDTO>();
+            Mapper.CreateMap<Director, DirectorDTO>();
+            Mapper.CreateMap<Review, ReviewDTO>();
+
+            return Mapper.Map<Film, FilmDTO>(Database.Films.GetByID(id));
+        }
+
         public void Delete(FilmDTO dto)
         {
             Database.Films.Delete(dto.ID);
