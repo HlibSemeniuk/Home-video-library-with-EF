@@ -13,5 +13,6 @@ namespace BLL.DTO
         public string Description { get; set; }
         public float Rating { get; set; }
         public virtual FilmDTO Film { get; set; }
+        public virtual int FilmID { get; set; }
     }
 }

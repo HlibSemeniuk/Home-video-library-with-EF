@@ -413,3 +413,6 @@ FodyWeavers.xsd
 /PL/DirectorMenus/DirectorMenu.resx
 /PL/DirectorMenus/DirectorMenu.Designer.cs
 /PL/DirectorMenus/DirectorMenu.cs
+/PL/ReviewMenus/ReviewMenu.resx
+/PL/ReviewMenus/ReviewMenu.Designer.cs
+/PL/ReviewMenus/ReviewMenu.cs
