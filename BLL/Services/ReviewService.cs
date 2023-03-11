@@ -43,7 +43,7 @@ namespace BLL.Services
             Mapper.CreateMap<Director, DirectorDTO>();
             Mapper.CreateMap<Genre, GenreDTO>();
 
-            Func<Review, bool> filmIDMatch = r => r.Film.ID == filmID;
+            Func<Review, bool> filmIDMatch = r => r.FilmID == filmID;
 
             return Mapper.Map<IEnumerable<Review>, List<ReviewDTO>>(Database.Reviews.Find(filmIDMatch));
         }
