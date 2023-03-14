@@ -416,3 +416,6 @@ FodyWeavers.xsd
 /PL/ReviewMenus/ReviewMenu.resx
 /PL/ReviewMenus/ReviewMenu.Designer.cs
 /PL/ReviewMenus/ReviewMenu.cs
+/PL/ReviewMenus/AddReview.resx
+/PL/ReviewMenus/AddReview.Designer.cs
+/PL/ReviewMenus/AddReview.cs
