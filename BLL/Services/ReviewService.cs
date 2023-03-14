@@ -16,9 +16,9 @@ namespace BLL.Services
     {
         public IUnitOfWork Database { get; set; }
 
-        public ReviewService(string connectionString)
+        public ReviewService(IUnitOfWork unitOfWork)
         {
-            Database = new UnitOfWork(connectionString);
+            Database = unitOfWork;
         }
 
         public void Add(ReviewDTO dto)

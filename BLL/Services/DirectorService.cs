@@ -15,9 +15,9 @@ namespace BLL.Services
     {
         public IUnitOfWork Database { get; set; }
 
-        public DirectorService(string connectionString)
+        public DirectorService(IUnitOfWork unitOfWork)
         {
-            Database = new UnitOfWork(connectionString);
+            Database = unitOfWork;
         }
 
         public void Add(DirectorDTO dto)
